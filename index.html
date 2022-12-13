@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- audio and video format is used by flash in js 
+        we primarily use js as 1st option-->
+    <h1>Audio and Video</h1>
+
+    <!-- autoplay is attribute, preload=none, autoplay, metadata
+        if we set preload=none,the pg will not get slow -->
+    <!-- mp3 will work on safari 5+,chrome 6+ IE9,
+        ogg will work on firefox,chrome,IE9 -->
+    <div>
+        <audio src="./audios/file_example_MP3_700KB.mp3" controls preload="none">Sample Music</audio>
+    </div>
+
+    <!-- if browser want to support all out audio inputs -->
+    <!-- we also give ogg type also, so that the browser 
+                can choose whatever browser supports -->
+    <!-- we can add more audio files in this format -->
+    <div>
+        <audio controls loop preload="">
+            <source src="./audios/file_example_MP3_700KB.mp3" type="audio/mp3">
+            format not supported <!-- if not supported -->
+        </audio>
+    </div>
+
+    <div>
+        <!-- we can also give loop,autoplay,preload,muted -->
+        <video controls width="300px" height="200px">
+            <source src="./videos/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+            format not supported <!-- if not supported -->
+        </video>
+    </div>
+
+    <!-- for lengthy videos we can use embed option by iframe tag
+        iframe tag is use for embed the things-->
+    <!-- we can directly embed from youtube and paste it here -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/3euDY96MbUA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+</body>
+</html>
